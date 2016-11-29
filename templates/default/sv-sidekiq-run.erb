@@ -11,6 +11,8 @@ rm -f "<%= @options[:pidfile] %>"
 
 cd "<%= @options[:working_dir] %>"
 
+<%= @options[:additional_service_commands] %>
+
 # Start sidekiq
 <% if @options[:bundle_exec] -%>
   exec chpst -u <%= @options[:owner] %>:<%= @options[:group] %> <%= @options[:bundle_command] %> exec sidekiq -C <%= @options[:sidekiq_config] %> -e <%= @options[:rails_env] %>

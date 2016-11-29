@@ -136,7 +136,8 @@ action :create do
         :bundle_command => new_resource.bundle_command,
         :rails_env => new_resource.rails_env,
         :owner => new_resource.owner,
-        :group => new_resource.group
+        :group => new_resource.group,
+        :additional_service_commands => new_resource.additional_service_commands
       )
     end
   end

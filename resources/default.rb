@@ -37,6 +37,7 @@ attribute :sidekiq_dir, :kind_of => [String, NilClass], :default => nil
 attribute :sidekiq_config, :kind_of => [String, NilClass], :default => nil
 attribute :pidfile, :kind_of => [String, NilClass], :default => nil
 attribute :logfile, :kind_of => [String, NilClass], :default => nil
+attribute :additional_service_commands, :kind_of => [String, NilClass], :default => ""
 
 def initialize(*args)
   super
